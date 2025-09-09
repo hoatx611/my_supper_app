@@ -14,15 +14,15 @@ import {
 } from 'react-native-safe-area-context';
 
 // Import config
-import { theme } from './src/config/theme';
+import { theme } from './src/config/theme.ts';
 import './src/config/i18n';
 
 // Import core services
-import { authService } from './src/core/auth';
+import { authService } from './src/core/auth/index';
 
 // Import mini apps
-import HelloScreen from './src/containers/app_test_hello/screens/HelloScreen';
-import AccountsListScreen from './src/containers/app_accounts/screens/AccountsListScreen';
+import HelloScreen from './src/containers/app_test_hello/screens/HelloScreen.tsx';
+import AccountsListScreen from './src/containers/app_accounts/screens/AccountsListScreen.tsx';
 
 // Home Screen Component
 const HomeScreen: React.FC = () => {
