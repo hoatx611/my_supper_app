@@ -1,0 +1,41 @@
+{
+  "name": "app_test_hello",
+  "version": "1.0.0",
+  "displayName": "Hello World",
+  "description": "A simple hello world mini app for testing purposes",
+  "author": "My Super App Team",
+  "icon": "👋",
+  "category": "demo",
+  "tags": ["demo", "hello", "test"],
+  "permissions": [],
+  "dependencies": [],
+  "screens": [
+    {
+      "name": "HelloScreen",
+      "path": "screens/HelloScreen",
+      "title": "Hello World",
+      "description": "Main hello screen"
+    }
+  ],
+  "navigation": {
+    "type": "stack",
+    "initialRoute": "HelloScreen",
+    "routes": [
+      {
+        "name": "HelloScreen",
+        "component": "HelloScreen",
+        "options": {
+          "title": "Hello World"
+        }
+      }
+    ]
+  },
+  "config": {
+    "theme": "default",
+    "locale": "en",
+    "features": {
+      "analytics": true,
+      "crashReporting": true
+    }
+  }
+}
