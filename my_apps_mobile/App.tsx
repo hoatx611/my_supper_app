@@ -23,6 +23,7 @@ import { authService } from './src/core/auth/index';
 // Import mini apps
 import HelloScreen from './src/containers/app_test_hello/screens/HelloScreen.tsx';
 import AccountsListScreen from './src/containers/app_accounts/screens/AccountsListScreen.tsx';
+import { WebViewScreen } from './src/containers/app_webview_camera/screens/WebViewScreen';
 
 // Home Screen Component
 const HomeScreen: React.FC = () => {
@@ -70,6 +71,8 @@ const SimpleTabNavigator: React.FC = () => {
         return <AccountsListScreen />;
       case 'hello':
         return <HelloScreen />;
+      case 'camera':
+        return <WebViewScreen />;
       default:
         return <HomeScreen />;
     }
@@ -161,6 +164,25 @@ const SimpleTabNavigator: React.FC = () => {
             color: activeTab === 'hello' ? theme.colors.primary : theme.colors.gray,
           }}>
             {t('navigation.hello')}
+          </Text>
+        </View>
+        
+        <View style={{ flex: 1, alignItems: 'center' }}>
+          <Text 
+            style={{ 
+              fontSize: 20, 
+              color: activeTab === 'camera' ? theme.colors.primary : theme.colors.gray,
+              marginBottom: 5,
+            }}
+            onPress={() => setActiveTab('camera')}
+          >
+            📷
+          </Text>
+          <Text style={{
+            fontSize: 12,
+            color: activeTab === 'camera' ? theme.colors.primary : theme.colors.gray,
+          }}>
+            Camera
           </Text>
         </View>
       </View>

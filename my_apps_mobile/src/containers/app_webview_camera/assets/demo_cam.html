@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Demo</title>
+    <link rel="stylesheet" href="demo_cam.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Camera Demo</h1>
+        <div class="button-group">
+            <button class="button primary" onclick="takePicture()">
+                <span class="icon">📷</span>
+                <span class="text">Chụp ảnh</span>
+            </button>
+            <button class="button secondary" onclick="selectImage()">
+                <span class="icon">🖼️</span>
+                <span class="text">Chọn ảnh</span>
+            </button>
+        </div>
+        
+        <div id="result" class="result">
+            <h3>Kết quả:</h3>
+            <div id="resultContent"></div>
+        </div>
+        
+        <div class="info">
+            <p>💡 Sử dụng các nút trên để tương tác với camera và thư viện ảnh</p>
+        </div>
+    </div>
+    
+    <script src="demo_cam.js"></script>
+</body>
+</html>
